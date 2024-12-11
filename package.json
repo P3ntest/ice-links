@@ -1,0 +1,26 @@
+{
+  "name": "ice-links",
+  "module": "src/main.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --hot src/main.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.26.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.4.1",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.35.3",
+    "hono": "^4.6.8",
+    "jose": "^5.9.6",
+    "pg": "^8.13.1",
+    "postgres": "^3.4.5",
+    "zod": "^3.23.8"
+  }
+}
