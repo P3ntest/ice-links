@@ -3,7 +3,6 @@ import { db } from "./db";
 import { linksTable } from "./db/schema";
 import { eq } from "drizzle-orm";
 import { logger } from "hono/logger";
-import { apiRouter } from "./api";
 
 export function urlToPath(url: URL) {
   return `/${url.host}${url.pathname}`;
@@ -19,7 +18,7 @@ const app = new Hono({
 });
 
 console.log(`/${process.env.API_HOST}/`);
-app.route(`/${process.env.API_HOST}/`, apiRouter);
+// app.route(`/${process.env.API_HOST}/`, apiRouter);
 
 app.get("/*", async (c) => {
   const path = c.req.path; // Example: /sub.domain.com:port/some/path
